@@ -45,7 +45,7 @@ class User(AbstractUser):
     is_seller = models.BooleanField()
     is_admin = models.BooleanField()
 
-    USERNAME_FIELD = 'email'
+    USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
-    
+
     objects = CustomUserManager()
