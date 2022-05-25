@@ -11,7 +11,7 @@ class Paymentinfo(models.Model):
     card_expiring_date = models.DateField()
     cvv = models.CharField(max_length=20)
     is_Active = models.BooleanField()
-    
+
     customer = models.ForeignKey(
-        'user.User', on_delete=models.CASCADE, related_name='paymentinfo'
+        "user.User", on_delete=models.CASCADE, related_name="paymentinfo"
     )

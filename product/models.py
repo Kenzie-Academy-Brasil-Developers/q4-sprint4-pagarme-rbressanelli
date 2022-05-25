@@ -9,7 +9,7 @@ class Product(models.Model):
     price = models.FloatField()
     quantity = models.IntegerField()
     is_Active = models.BooleanField()
-    
+
     seller = models.ForeignKey(
-        'user.User', on_delete=models.CASCADE, related_name='products'
+        "user.User", on_delete=models.CASCADE, related_name="products"
     )
