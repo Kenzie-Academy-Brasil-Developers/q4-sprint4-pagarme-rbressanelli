@@ -63,13 +63,13 @@ class TransactionsView(ListCreateAPIView):
             payabledict = {
                 "status": "waiting_funds",
                 "payment_date": transactions.created_at + timedelta(days=30),
-                "amount": transactions.amount - float(fee.credit_fee) * 100,
+                "amount": transactions.amount + float(fee.credit_fee) * 100,
             }
         else:
             payabledict = {
                 "status": "paid",
                 "payment_date": transactions.created_at,
-                "amount": transactions.amount - float(fee.debit_fee) * 100,
+                "amount": transactions.amount + float(fee.debit_fee) * 100,
             }
 
         payable = Payable.objects.create(
