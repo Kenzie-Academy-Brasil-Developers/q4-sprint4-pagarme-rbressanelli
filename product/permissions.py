@@ -9,8 +9,11 @@ class IsSellerUser(BasePermission):
     def has_permission(self, request: Request, _):
         restrict_methods = ["POST"]
 
-        user: User = request.user
-
+        user: User = request.user 
+               
+        if user.is_anonymous:
+            return False
+        
         if request.method in restrict_methods and not user.is_seller:
             return False
 

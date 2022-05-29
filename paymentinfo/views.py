@@ -19,8 +19,10 @@ class PaymentMethodView(ListCreateAPIView):
     
     def perform_create(self, serializer):
         serializer = serializer.save(customer=self.request.user)
-        return serializer
+              
+        return serializer  
     
+   
     def list(self, request: Request):
         user: User = request.user
         
