@@ -10,7 +10,7 @@ class IsSellerUser(BasePermission):
         restrict_methods = "GET"
 
         user: User = request.user
-        
+
         if user.is_anonymous:
             return False
 

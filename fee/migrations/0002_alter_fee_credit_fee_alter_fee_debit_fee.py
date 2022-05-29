@@ -6,18 +6,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('fee', '0001_initial'),
+        ("fee", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='fee',
-            name='credit_fee',
+            model_name="fee",
+            name="credit_fee",
             field=models.FloatField(default=0.05),
         ),
         migrations.AlterField(
-            model_name='fee',
-            name='debit_fee',
+            model_name="fee",
+            name="debit_fee",
             field=models.FloatField(default=0.03),
         ),
     ]

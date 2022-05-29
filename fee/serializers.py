@@ -6,6 +6,9 @@ from .models import Fee
 class FeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Fee
-        fields =[
-            'id', 'credit_fee', 'debit_fee', 'created_at',
+        fields = [
+            "id",
+            "credit_fee",
+            "debit_fee",
+            "created_at",
         ]

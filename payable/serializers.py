@@ -4,9 +4,6 @@ from payable.models import Payable
 
 
 class PayablesSerializer(serializers.ModelSerializer):
-    
     class Meta:
         model = Payable
-        fields =[
-            'id', 'amount'
-        ]
+        fields = ["id", "amount"]

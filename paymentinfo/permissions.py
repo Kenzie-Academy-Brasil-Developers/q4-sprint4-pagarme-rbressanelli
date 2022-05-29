@@ -6,11 +6,11 @@ from user.models import User
 
 class IsBuyerUser(BasePermission):
     def has_permission(self, request: Request, _):
-        restrict_methods = ["GET", 'POST']
+        restrict_methods = ["GET", "POST"]
 
         user: User = request.user
 
-        if request.method in restrict_methods and user.is_admin and user.is_seller:            
+        if request.method in restrict_methods and user.is_admin and user.is_seller:
             return False
 
         return True

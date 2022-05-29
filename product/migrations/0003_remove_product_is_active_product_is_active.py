@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('product', '0002_initial'),
+        ("product", "0002_initial"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='product',
-            name='is_Active',
+            model_name="product",
+            name="is_Active",
         ),
         migrations.AddField(
-            model_name='product',
-            name='is_active',
+            model_name="product",
+            name="is_active",
             field=models.BooleanField(default=True),
         ),
     ]
